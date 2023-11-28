@@ -21,7 +21,7 @@ echo "<!DOCTYPE html>
 </head>
 <body>
   <h1>404 Not Found</h1>
-  <p>Ceci n'est pas une page</p>
+  <p><span style="background-color: red">Ceci n'est pas une page</span></p>
 </body>
 </html>" | sudo tee /var/www/html/404.html >/dev/nullservice nginx restart
 
