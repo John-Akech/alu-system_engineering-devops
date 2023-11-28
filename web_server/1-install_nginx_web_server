@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # a Bash script that configures a new Ubuntu machine to respect
 # above requirements (this script will be run on the server itself)
 # bash script to install nginx web server
