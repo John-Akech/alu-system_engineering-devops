@@ -1,18 +1,13 @@
-sh script that configures container
-# Correct permissions for Nginx
-sudo chown -R nginx:nginx /etc/nginx/
-# Stop Apache2
+#!/usr/bin/env bash
+# bash script that configures container
+sudo chown -R 755 /etc/nginx/
 sudo pkill -9 apache2
-# Update Apache2 port configuration
 sudo sed -i 's/8080/8081/g' /etc/apache2/ports.conf
-# Update Nginx port configuration
-sudo sed -i 's/80/8080/g' /etc/nginx/sites-enabled/default
-# Restart Nginx
-sudo service nginx restart
-
-
-
-
-
-
-
+su nginx -c "sed -i 's/80/8080/g' /etc/nginx/sites-enabled/default"
+su nginx service nginx restart#!/usr/bin/env bash
+# bash script that configures container
+sudo chown -R 755 /etc/nginx/
+sudo pkill -9 apache2
+sudo sed -i 's/8080/8081/g' /etc/apache2/ports.conf
+su nginx -c "sed -i 's/80/8080/g' /etc/nginx/sites-enabled/default"
+su nginx service nginx restart
